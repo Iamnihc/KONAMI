@@ -107,7 +107,7 @@ window.addEventListener("keydown", function(event) {
     }
     else if (stage==15 && event.key=="Enter" ){
         let code = inputbox.value;
-        if (code.toLowerCase() == "ugh hoeffel"){
+        if (code.toLowerCase() == "ughhoeffel"){
             stage++;
             hintbox.innerHTML="brpak pakmohrc";
             inputbox.placeholder="ur almost there (otp)";
@@ -187,15 +187,29 @@ window.addEventListener("keydown", function(event) {
         let code = inputbox.value;
         if (code.toLowerCase() == "8675309"){
             stage++;
-            hintbox.innerHTML="store.steampowered.com";
-            inputbox.placeholder="that was a steam code";
-            inputbox.value = steamcode;
+            hintbox.innerHTML="stuff.txt used to have something";
+            inputbox.placeholder="good thing i use github";
+            inputbox.value = "";
         }
         else{
             let code = inputbox.value;
             if (code.startsWith("925")){
                 alert("wrong jenny lol");
             }
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==22 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "weitpttpinrsbiglrr"){
+            stage++;
+            hintbox.innerHTML="store.steampowered.com";
+            inputbox.placeholder="that was a steam code";
+            inputbox.value = steamcode;
+        }
+        else{
+
             alert("try again");
              inputbox.value = "";
         }
