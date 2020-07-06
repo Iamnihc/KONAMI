@@ -47,7 +47,7 @@ window.addEventListener("keydown", function(event) {
         console.log("complete");
         inputbox=document.getElementById("in");
         hintbox = document.getElementById("hint");
-        hintbox.innerHTML="goodbye yellow road";
+        hintbox.innerHTML="goodbye yellow road by elton john";
         inputbox.hidden=false;
     }
     else if (stage==11 && event.key=="Enter" ){
@@ -80,9 +80,74 @@ window.addEventListener("keydown", function(event) {
         let code = inputbox.value;
         if (code.toLowerCase() == "box"){
             stage++;
-            hintbox.innerHTML="ubg jngrje";
+            hintbox.innerHTML="ubg jngre";
             inputbox.placeholder="rot13";
             inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==14 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "hot water"){
+            stage++;
+            hintbox.innerHTML="baabb aabba aabbb aabbb abbab aabaa aabab aabab aabaa ababa";
+            inputbox.placeholder="bacon ab";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==15 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "ugh hoeffel"){
+            stage++;
+            hintbox.innerHTML="brpak pakmohrc";
+            inputbox.placeholder="ur almost there (otp)";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==16 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "happy birthday"){
+            stage++;
+            hintbox.innerHTML="funtion aaa";
+            inputbox.placeholder="returns";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==18 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "0454"){
+            stage++;
+            hintbox.innerHTML="from";
+            inputbox.placeholder="name";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==19 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "chinmai"){
+            stage++;
+            hintbox.innerHTML="store.steampowered.com";
+            inputbox.placeholder="that was a steam code";
+            inputbox.value = "(insert code)";
         }
         else{
             alert("try again");
@@ -96,6 +161,21 @@ window.addEventListener("keydown", function(event) {
 
 
   }, true);
+
+  function aaa(){
+    let code = inputbox.value;
+    if (code.toLowerCase() == "code" && stage==17){
+        stage++;
+        hintbox.innerHTML="discord";
+        inputbox.placeholder="#";
+        inputbox.value = "";
+    }
+    else{
+        alert("look at the return");
+         inputbox.value = "";
+         return ("code");
+    }
+  }
 
   
 
