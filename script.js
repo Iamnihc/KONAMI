@@ -1,4 +1,5 @@
-stage=0;
+var stage=0;
+var inputbox, hintbox;
 window.addEventListener("keydown", function(event) {
     if (stage==0&& event.key=="ArrowUp"){
         stage++;
@@ -44,12 +45,53 @@ window.addEventListener("keydown", function(event) {
         stage++;
         console.log(stage);
         console.log("complete");
-        document.getElementById("in").hidden=false;
+        inputbox=document.getElementById("in");
+        hintbox = document.getElementById("hint");
+        hintbox.innerHTML="goodbye yellow road";
+        inputbox.hidden=false;
     }
-    else if (stage==11 && )
+    else if (stage==11 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "brick"){
+            stage++;
+            hintbox.innerHTML="37.849422, -122.145384";
+            inputbox.value = "";
+            inputbox.placeholder="city";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==12 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "orinda"){
+            stage++;
+            hintbox.innerHTML="Ym94";
+            inputbox.placeholder="b64";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==13 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "box"){
+            stage++;
+            hintbox.innerHTML="ubg jngrje";
+            inputbox.placeholder="rot13";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
     else{
-        stage=0;
-        console.log(event.key=="Enter");
+        if (stage<10) stage=0;
+        
     }
 
 
