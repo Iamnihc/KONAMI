@@ -1,3 +1,6 @@
+var steamcode = "";
+
+
 var stage=0;
 var inputbox, hintbox;
 window.addEventListener("keydown", function(event) {
@@ -145,11 +148,54 @@ window.addEventListener("keydown", function(event) {
         let code = inputbox.value;
         if (code.toLowerCase() == "chinmai"){
             stage++;
-            hintbox.innerHTML="store.steampowered.com";
-            inputbox.placeholder="that was a steam code";
-            inputbox.value = "(insert code)";
+            hintbox.innerHTML="registrar name";
+            inputbox.placeholder="whois chinmai.dev";
+            inputbox.value = "";
         }
         else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==20 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "porkbun"){
+            stage++;
+            hintbox.innerHTML="ssl cert";
+            inputbox.placeholder="issued by";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==21 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "let's encrypt authority x3"){
+            stage++;
+            hintbox.innerHTML="readme.txt";
+            inputbox.placeholder="";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==22 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "8675309"){
+            stage++;
+            hintbox.innerHTML="store.steampowered.com";
+            inputbox.placeholder="that was a steam code";
+            inputbox.value = steamcode;
+        }
+        else{
+            let code = inputbox.value;
+            if (code.startsWith("925")){
+                alert("wrong jenny lol");
+            }
             alert("try again");
              inputbox.value = "";
         }
