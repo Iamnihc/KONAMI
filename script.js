@@ -1,5 +1,6 @@
 var steamcode = "";
-
+myStorage = window.localStorage;
+myStorage.setItem('oh look you found it', 'ijustateacookie');
 
 var stage=0;
 var inputbox, hintbox;
@@ -200,10 +201,25 @@ window.addEventListener("keydown", function(event) {
              inputbox.value = "";
         }
     }
-    else if (stage==22 && event.key=="Enter" ){
+    else if (stage==23 && event.key=="Enter" ){
         let code = inputbox.value;
         if (code.toLowerCase() == "weitpttpinrsbiglrr"){
             stage++;
+            hintbox.innerHTML="i like cookies";
+            inputbox.placeholder="im supposed to make sure you accept them first";
+            inputbox.value = "";
+        }
+        else{
+            alert("try again");
+             inputbox.value = "";
+        }
+    }
+    else if (stage==24 && event.key=="Enter" ){
+        let code = inputbox.value;
+        if (code.toLowerCase() == "ijustateacookie"){
+            stage++;
+            alert("sorry to make it so hard for you");
+            alert("but i like to have my fun");
             hintbox.innerHTML="store.steampowered.com";
             inputbox.placeholder="that was a steam code";
             inputbox.value = steamcode;
